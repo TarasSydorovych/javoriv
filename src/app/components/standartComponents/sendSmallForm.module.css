@@ -1,0 +1,72 @@
+.wrapSmallForm {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: white;
+}
+.pInSmallForm {
+  font-family: "Futura PT";
+  margin: 0;
+  color: #27214f;
+  font-weight: bold;
+  font-size: 50px;
+}
+.formWrap {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.form {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.inputField {
+  border: 1px solid #27214f;
+  width: 300px;
+  height: 50px;
+  padding-left: 15px;
+  font-family: "Futura PT";
+  color: #27214f;
+  font-size: 20px;
+}
+.inputField::placeholder {
+  font-family: "Futura PT";
+  color: #27214f;
+  font-size: 20px;
+}
+.submitButton {
+  width: 250px;
+  height: 50px;
+  border: none;
+  background: #27214f;
+  font-family: "Futura PT";
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* skjhfgldkafg*/
+@media only screen and (max-width: 479px) and (min-width: 300px) {
+  .pInSmallForm {
+    font-family: "Futura PT";
+    margin: 0;
+    color: #27214f;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+  }
+}

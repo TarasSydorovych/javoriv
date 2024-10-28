@@ -1,0 +1,110 @@
+.wrapFirstBlock {
+  width: 100%;
+  height: 290px;
+  background: url("../../img/tt_bg.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contactPMain {
+  font-family: "Futura PT";
+  font-size: 35px;
+  color: white;
+}
+.blockWithFormWrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.sendFormWrap {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wrapWithLabel {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+.labelInForm {
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: #27214f;
+  margin-bottom: 15px;
+}
+.input {
+  width: 500px;
+  height: 50px;
+  border: 1px solid #27214f;
+}
+.inputArea {
+  width: 500px;
+  height: 150px;
+  border: 1px solid #27214f;
+}
+.formSendButton {
+  background: #27214f;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+}
+.localInformWrap {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.wrapInformationsI {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+.pAdress {
+  font-family: "Futura PT";
+  font-size: 30px;
+  color: #27214f;
+}
+.aHome {
+  flex-shrink: 0;
+  font-size: 40px;
+  color: #27214f;
+  margin-right: 20px;
+}
+.greyDesc {
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: #7a7a7a;
+  margin-top: 10px;
+}
+.wrpaMap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.mapPin {
+  font-family: "Futura PT";
+  font-size: 40px;
+  color: #27214f;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
