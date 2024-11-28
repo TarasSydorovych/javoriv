@@ -1,0 +1,789 @@
+.productPage {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding-top: 0;
+  padding-bottom: 0px;
+}
+.pictureBlockWrap {
+  width: 600px;
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.wrapAllPhoto {
+  width: 101px;
+  height: 464px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttonDown {
+  width: 101px;
+  height: 30px;
+  border: none;
+  background: #042037;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttonUp {
+  width: 101px;
+  height: 30px;
+  border: none;
+  background: #042037;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pictureWrap {
+  width: calc(101px - 2px);
+  height: 113px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+
+  margin-top: 12px;
+}
+.wrapOnePhoto {
+  position: relative;
+  width: 100%; /* Додаємо 100% ширини, щоб вона займала всю доступну площу */
+  max-width: 419px; /* Обмежуємо максимальну ширину */
+  height: 100%; /* Встановлюємо висоту */
+  max-height: 464px; /* Обмежуємо максимальну висоту */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Забезпечуємо обрізку, якщо зображення більше блоку */
+}
+
+.imgBigA {
+  width: 100%; /* Ширина зображення буде адаптивною */
+  height: auto; /* Висота зображення буде автоматичною */
+  object-fit: contain; /* Забезпечує масштабування зображення, щоб не виходило за межі блоку */
+}
+.imageSmall {
+  width: calc(99px - 4px);
+  height: calc(76px - 4px);
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid var(--primarynormal-color);
+}
+.allPicWrap {
+  height: 464px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.imageContainer {
+  position: relative;
+  width: 100%; /* Ширина буде займати весь контейнер */
+  height: 100%; /* Висота адаптується */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgBigA {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+.arrowInButton {
+  color: white;
+  font-size: 20px;
+}
+.wrapBlockMainTitle {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+.wrapFirstBlock {
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 100px;
+}
+.allProdWrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nameProduct {
+  font-family: "Futura PT";
+  font-size: 40px;
+  color: #042037;
+}
+.smalDescriptions {
+  font-family: "Futura PT";
+  font-size: 25px;
+  color: #042037;
+  margin-top: 15px;
+}
+.likeGuarantyWrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.wrapOneGuard {
+  width: 180px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.iconGuard {
+  font-size: 45px;
+  color: #f8b123;
+}
+.quardPin {
+  text-align: center;
+  margin-top: 15px;
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: #042037;
+}
+.threDmodelBUtton {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theThreDButton {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: white;
+  background: #042037;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupContent {
+  position: relative;
+  width: 1200px;
+  height: 80%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #042037;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modelContainer {
+  width: 100%;
+  height: 100%;
+}
+.wrapAiOutlineClose {
+  color: white;
+}
+.haracteristicWrap {
+  width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.evenItem {
+  background-color: #f0f0f0; /* Світло-сірий фон для парних елементів */
+  width: 100%;
+  margin-top: 15px;
+  font-family: "Futura PT";
+  font-size: 25px;
+}
+
+.oddItem {
+  background-color: transparent; /* Прозорий фон для непарних елементів */
+  width: 100%;
+  margin-top: 15px;
+  font-family: "Futura PT";
+  font-size: 25px;
+}
+.ulWrapOm {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+}
+.haracterisvP {
+  align-self: center;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  font-family: "Futura PT";
+  font-size: 40px;
+  color: #042037;
+}
+.vieoVievP {
+  align-self: center;
+  margin-top: 90px;
+  margin-bottom: 20px;
+  font-family: "Futura PT";
+  font-size: 40px;
+  color: #f8b123;
+}
+.videoReviewContainer {
+  width: 800px;
+  height: 500px;
+}
+.wrapSeoText {
+  width: 800px;
+  height: auto;
+  margin-top: 50px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Світло-тінь */
+  transition: box-shadow 0.3s ease;
+  padding: 60px;
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: #042037;
+  margin-bottom: 50px;
+}
+.twoButtonsWrap {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+.wrapButtonBye {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.byeButtonM {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: white;
+  background: #f8b123;
+  margin-top: 40px;
+  cursor: pointer;
+  margin-left: 40px;
+  border: none;
+}
+@media only screen and (max-width: 479px) and (min-width: 300px) {
+  .wrapFirstBlock {
+    width: calc(100% - 10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .pictureBlockWrap {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .wrapAllPhoto {
+    width: 60px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .buttonUp {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: #042037;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttonDown {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: #042037;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pictureWrap {
+    width: calc(60px - 2px);
+    height: 113px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    margin-top: 12px;
+  }
+  .imageSmall {
+    width: calc(99px - 4px);
+    height: calc(76px - 4px);
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid var(--primarynormal-color);
+  }
+  .wrapBlockMainTitle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0px;
+  }
+  .likeGuarantyWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapOneGuard {
+    width: 180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .twoButtonsWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+  .byeButtonM {
+    margin-left: 0px;
+  }
+  .haracteristicWrap {
+    width: calc(100% - 10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .evenItem {
+    background-color: #f0f0f0; /* Світло-сірий фон для парних елементів */
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Futura PT";
+    font-size: 18px;
+  }
+
+  .oddItem {
+    background-color: transparent; /* Прозорий фон для непарних елементів */
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Futura PT";
+    font-size: 18px;
+  }
+  .videoReviewContainer {
+    width: 100%;
+    height: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapSeoText {
+    width: calc(100% - 50px);
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Світло-тінь */
+    transition: box-shadow 0.3s ease;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: #042037;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+  .wrapFirstBlock {
+    width: calc(100% - 10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .pictureBlockWrap {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .wrapAllPhoto {
+    width: 60px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .buttonUp {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: #042037;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttonDown {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: #042037;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pictureWrap {
+    width: calc(60px - 2px);
+    height: 113px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    margin-top: 12px;
+  }
+  .imageSmall {
+    width: calc(99px - 4px);
+    height: calc(76px - 4px);
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid var(--primarynormal-color);
+  }
+  .wrapBlockMainTitle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0px;
+  }
+  .likeGuarantyWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapOneGuard {
+    width: 180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .twoButtonsWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+  .byeButtonM {
+    margin-left: 0px;
+  }
+  .haracteristicWrap {
+    width: calc(100% - 10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .evenItem {
+    background-color: #f0f0f0; /* Світло-сірий фон для парних елементів */
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Futura PT";
+    font-size: 18px;
+  }
+
+  .oddItem {
+    background-color: transparent; /* Прозорий фон для непарних елементів */
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Futura PT";
+    font-size: 18px;
+  }
+  .videoReviewContainer {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapSeoText {
+    width: calc(100% - 50px);
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Світло-тінь */
+    transition: box-shadow 0.3s ease;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: #042037;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 700px) {
+  .wrapFirstBlock {
+    width: calc(100% - 10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .pictureBlockWrap {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .wrapAllPhoto {
+    width: 60px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .buttonUp {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: #042037;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .buttonDown {
+    width: 60px;
+    height: 30px;
+    border: none;
+    background: #042037;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pictureWrap {
+    width: calc(60px - 2px);
+    height: 113px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+    margin-top: 12px;
+  }
+  .imageSmall {
+    width: calc(99px - 4px);
+    height: calc(76px - 4px);
+    object-fit: contain;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid var(--primarynormal-color);
+  }
+  .wrapBlockMainTitle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0px;
+  }
+  .likeGuarantyWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapOneGuard {
+    width: 180px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  .twoButtonsWrap {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
+  .byeButtonM {
+    margin-left: 0px;
+  }
+  .haracteristicWrap {
+    width: calc(100% - 10px);
+    padding-left: 5px;
+    padding-right: 5px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .evenItem {
+    background-color: #f0f0f0; /* Світло-сірий фон для парних елементів */
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Futura PT";
+    font-size: 18px;
+  }
+
+  .oddItem {
+    background-color: transparent; /* Прозорий фон для непарних елементів */
+    width: 100%;
+    margin-top: 15px;
+    font-family: "Futura PT";
+    font-size: 18px;
+  }
+  .videoReviewContainer {
+    width: 90%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapSeoText {
+    width: calc(100% - 50px);
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Світло-тінь */
+    transition: box-shadow 0.3s ease;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: #042037;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 960px) {
+}
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+}
+@media only screen and (max-width: 1600px) and (min-width: 1400px) {
+}

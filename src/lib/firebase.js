@@ -3,13 +3,13 @@ import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 // Конфігурація Firebase (використовуйте свої дані з Firebase Console)
 const firebaseConfig = {
-  apiKey: "AIzaSyCVnNHNbIxLe_zhoqrzVIhibmScg8lTTdM",
-  authDomain: "insortex-adb58.firebaseapp.com",
-  projectId: "insortex-adb58",
-  storageBucket: "insortex-adb58.appspot.com",
-  messagingSenderId: "426044418125",
-  appId: "1:426044418125:web:138670b536c0af6ef51404",
-  measurementId: "G-W7S7WFHY56",
+  apiKey: "AIzaSyAxUDd-rGspQ9HpZYcQC0I9_0VyXRAolXs",
+  authDomain: "newjavoriv.firebaseapp.com",
+  projectId: "newjavoriv",
+  storageBucket: "newjavoriv.firebasestorage.app",
+  messagingSenderId: "347440953186",
+  appId: "1:347440953186:web:1cf004098a61524f8a1e3b",
+  measurementId: "G-86PXQF00YP",
 };
 
 const app = initializeApp(firebaseConfig);

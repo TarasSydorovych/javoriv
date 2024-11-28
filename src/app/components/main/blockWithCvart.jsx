@@ -25,14 +25,17 @@ const BlockWithCvart = () => {
             alt="ЯнівБуд"
             className={css.photoKvartOne} // Додаємо клас для стилізації, якщо потрібно
           />
-          <Link href="/your-page-url" className={css.wrapOnePInProd}>
+          <Link
+            href="/product/odnokimnatna-kvartyra-ploshcheyu-42.47"
+            className={css.wrapOnePInProd}
+          >
             {" "}
             {/* Замініть /your-page-url на бажане посилання */}
             <div className={css.wrapOnePInProd} style={{ cursor: "pointer" }}>
               {" "}
               {/* Додаємо стиль для курсора */}
               <p className={css.nameKvart}>Однокімнатна квартира</p>
-              <p className={css.nameKvart}>46м²</p>
+              <p className={css.nameKvart}>42.47м²</p>
             </div>
           </Link>
           {/* <ButtonWithPopProd /> */}
@@ -44,14 +47,17 @@ const BlockWithCvart = () => {
             alt="ЯнівБуд"
             className={css.photoKvartOne} // Додаємо клас для стилізації, якщо потрібно
           />
-          <Link href="/your-page-url" className={css.wrapOnePInProd}>
+          <Link
+            href="/product/dvokimnatna-kvartyra-ploshcheyu-64.89"
+            className={css.wrapOnePInProd}
+          >
             {" "}
             {/* Замініть /your-page-url на бажане посилання */}
             <div className={css.wrapOnePInProd} style={{ cursor: "pointer" }}>
               {" "}
               {/* Додаємо стиль для курсора */}
               <p className={css.nameKvart}>Двокімнатна квартира</p>
-              <p className={css.nameKvart}>68м²</p>
+              <p className={css.nameKvart}>64.89м²</p>
             </div>
           </Link>
           {/* <ButtonWithPopProd /> */}
@@ -63,14 +69,17 @@ const BlockWithCvart = () => {
             alt="ЯнівБуд"
             className={css.photoKvartOne} // Додаємо клас для стилізації, якщо потрібно
           />
-          <Link href="/your-page-url" className={css.wrapOnePInProd}>
+          <Link
+            href="/product/3-kimnatna-kvartyra-82.42"
+            className={css.wrapOnePInProd}
+          >
             {" "}
             {/* Замініть /your-page-url на бажане посилання */}
             <div className={css.wrapOnePInProd} style={{ cursor: "pointer" }}>
               {" "}
               {/* Додаємо стиль для курсора */}
               <p className={css.nameKvart}>Трьохкімнатна квартира</p>
-              <p className={css.nameKvart}>86м²</p>
+              <p className={css.nameKvart}>82.42м²</p>
             </div>
           </Link>
           {/* <ButtonWithPopProd /> */}

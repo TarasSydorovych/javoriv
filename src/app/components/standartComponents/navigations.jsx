@@ -54,11 +54,11 @@ const Navigations = () => {
                 </li>
                 <li>
                   <Link
-                    href={`/works`}
+                    href={`/info`}
                     className={css.link}
                     onClick={toggleMenu}
                   >
-                    Наші роботи
+                    Інформація про об&apos;єкт
                   </Link>
                 </li>
                 <li>
@@ -70,15 +70,7 @@ const Navigations = () => {
                     Блог
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href={`/about`}
-                    className={css.link}
-                    onClick={toggleMenu}
-                  >
-                    Про нас
-                  </Link>
-                </li>
+
                 <li>
                   <Link
                     href={`/contact`}
@@ -104,17 +96,17 @@ const Navigations = () => {
               Квартири
             </Link>
           </li>
-
+          <li className={css.liNavigation}>
+            <Link href={`/info`} className={css.link}>
+              Інформація про об&apos;єкт
+            </Link>
+          </li>
           <li className={css.liNavigation}>
             <Link href={`/blog`} className={css.link}>
               Блог
             </Link>
           </li>
-          <li className={css.liNavigation}>
-            <Link href={`/about`} className={css.link}>
-              Про нас
-            </Link>
-          </li>
+
           <li className={css.liNavigation}>
             <Link href={`/contact`} className={css.link}>
               Контакти

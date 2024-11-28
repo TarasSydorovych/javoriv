@@ -58,6 +58,7 @@ import axios from "axios";
 export default function AddCategoryPage() {
   const router = useRouter();
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null); // Вибрана категорія
 
   const fetchCategories = async () => {
     try {
@@ -67,7 +68,9 @@ export default function AddCategoryPage() {
       console.error("Error fetching categories", error);
     }
   };
-
+  const clearSelection = () => {
+    setSelectedCategory(null); // Очищення вибраної категорії
+  };
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -86,6 +89,7 @@ export default function AddCategoryPage() {
           </button>
         </div>
         <CategoryForm
+          clearSelection={clearSelection}
           categories={categories}
           fetchCategories={fetchCategories}
         />

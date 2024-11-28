@@ -1,0 +1,285 @@
+/* .customArrow {
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.customArrow:hover {
+  background-color: #000;
+}
+
+.pictureBlockWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapOnePhoto {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.imgBigA {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+.customArrow {
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: absolute; /* Додаємо абсолютне позиціонування */
+  top: 50%; /* Центруємо стрілки по вертикалі */
+  transform: translateY(-50%); /* Для вирівнювання по вертикалі */
+}
+
+.customArrow:hover {
+  background-color: #000;
+}
+
+.slick-prev {
+  position: absolute;
+  left: -40px; /* Відстань від лівого краю */
+}
+
+.slick-next {
+  position: absolute;
+  right: -40px; /* Відстань від правого краю */
+}
+
+.pictureBlockWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Додаємо відносне позиціонування для батьківського контейнера */
+}
+
+.wrapOnePhoto {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.imgBigA {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.customArrowNext {
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: absolute; /* Додаємо абсолютне позиціонування */
+  top: 50%; /* Центруємо стрілки по вертикалі */
+  transform: translateY(-50%); /* Для вирівнювання по вертикалі */
+  left: 103%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.customArrowPrev {
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 24px;
+  border: none;
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  position: absolute; /* Додаємо абсолютне позиціонування */
+  top: 50%; /* Центруємо стрілки по вертикалі */
+  transform: translateY(-50%); /* Для вирівнювання по вертикалі */
+  left: -10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 479px) and (min-width: 300px) {
+  .catalogContainer {
+    padding-top: 20px;
+  }
+  .wrapSmallCatalog {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .categorySidebar {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-right: 0 solid #f8b123;
+    border-bottom: 1px solid #f8b123;
+  }
+  .productsMain {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: auto;
+  }
+  .wrapProductsAll {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  .wrapOneProducts {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    border: 1px solid #042037;
+    overflow: hidden;
+    transition: transform 0.3s ease, border 0.3s ease; /* Додаємо плавний перехід для збільшення і зміни бордеру */
+  }
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+  .catalogContainer {
+    padding-top: 20px;
+  }
+  .wrapSmallCatalog {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .categorySidebar {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-right: 0 solid #f8b123;
+    border-bottom: 1px solid #f8b123;
+  }
+  .productsMain {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: auto;
+  }
+  .wrapProductsAll {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  .wrapOneProducts {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    border: 1px solid #042037;
+    overflow: hidden;
+    transition: transform 0.3s ease, border 0.3s ease; /* Додаємо плавний перехід для збільшення і зміни бордеру */
+  }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 700px) {
+  .catalogContainer {
+    padding-top: 20px;
+  }
+  .wrapSmallCatalog {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .categorySidebar {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-right: 0 solid #f8b123;
+    border-bottom: 1px solid #f8b123;
+  }
+  .productsMain {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height: auto;
+  }
+  .wrapProductsAll {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  .wrapOneProducts {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    border: 1px solid #042037;
+    overflow: hidden;
+    transition: transform 0.3s ease, border 0.3s ease; /* Додаємо плавний перехід для збільшення і зміни бордеру */
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 960px) {
+  .categorySidebar {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+  .categorySidebar {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1400px) {
+}

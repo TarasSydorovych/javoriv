@@ -148,7 +148,14 @@
 .liNavigation:hover::after {
   width: 100%; /* Розширює лінію до повної ширини при наведенні */
 }
-
+.webUiDev {
+  position: absolute;
+  font-family: "Futura PT";
+  color: white;
+  font-size: 20px;
+  bottom: 10px;
+  right: 10px;
+}
 .wrapFooter {
   padding-top: 50px;
   padding-bottom: 50px;

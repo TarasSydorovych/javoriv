@@ -79,6 +79,7 @@ export default function EditCategoryPage({ params }) {
   const [category, setCategory] = useState(null);
   const router = useRouter();
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(null); // Вибрана категорія
 
   const fetchCategory = async () => {
     try {
@@ -97,7 +98,9 @@ export default function EditCategoryPage({ params }) {
       console.error("Error fetching categories", error);
     }
   };
-
+  const clearSelection = () => {
+    setSelectedCategory(null); // Очищення вибраної категорії
+  };
   useEffect(() => {
     fetchCategory();
     fetchCategories();
@@ -121,6 +124,7 @@ export default function EditCategoryPage({ params }) {
             selectedCategory={category}
             categories={categories}
             fetchCategories={() => router.push("/admin/categories")}
+            clearSelection={clearSelection}
           />
         )}
       </div>

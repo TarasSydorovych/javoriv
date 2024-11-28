@@ -5,7 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
 import { IoLocation } from "react-icons/io5";
-
+import qRds from "../../img/qRds.png";
 import Link from "next/link";
 import logoJavorivNewWhite from "../../img/jkjanivbud.png";
 import FormInPidpus from "./formInPidpus";
@@ -87,6 +87,17 @@ const Footer = ({ t, lng }) => {
           </li>
         </ul>
       </nav>
+      <Image src={qRds} alt="Insortex Logo" className={css.logoFooterqRds} />
+      <p className={css.webUiDev}>
+        Розробка та підтримка{" "}
+        <a
+          href="https://webui.com.ua/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WebUi
+        </a>
+      </p>
     </footer>
   );
 };

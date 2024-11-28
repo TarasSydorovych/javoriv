@@ -13,7 +13,8 @@ export default function ProtectedRoute({ children }) {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        const allowedEmails = ["jakzadarom2@gmail.com"];
+        const allowedEmails = ["jakzadarom2@gmail.com", "yanivbud@gmail.com"];
+
         if (allowedEmails.includes(user.email)) {
           setUser(user);
         } else {

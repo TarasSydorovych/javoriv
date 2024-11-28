@@ -8,7 +8,13 @@ import HeaderWhite from "../components/standartComponents/headerWhite";
 import FirtBlockContact from "../components/contact/firstBlockContact";
 import BlockWithForm from "../components/contact/blockWithForm";
 import Map from "../components/contact/map";
-
+export async function generateMetadata() {
+  return {
+    title: "Контакти – Продаж квартир у Новояворівську",
+    description:
+      "Зв'яжіться з нами для детальної інформації про продаж квартир у Новояворівську. Наші контакти та розташування на карті.",
+  };
+}
 export default function Home() {
   return (
     <div className={css.allMainWrap}>

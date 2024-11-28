@@ -3,7 +3,7 @@ import css from "./main.module.css";
 import locTov from "../../img/locTov.png";
 import housYouNeed from "../../img/housYouNeed.png";
 import forYuouNeed from "../../img/forYuouNeed.png";
-const WhotYouNeed = () => {
+const WhotYouNeed = ({ mainData }) => {
   return (
     <div className={css.wrapWhotYouNeed}>
       <p className={css.planingP}>ЖК ЯнівБуд — саме те, що вам потрібно</p>

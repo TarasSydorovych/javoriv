@@ -102,7 +102,17 @@
   font-size: 16px;
   font-family: "Futura PT", sans-serif;
 }
-
+.wrinput {
+  font-size: 16px;
+  font-family: "Futura PT", sans-serif;
+  width: 150px;
+  height: 40px;
+  margin-left: 20px;
+}
+.someClasInM {
+  font-size: 16px;
+  font-family: "Futura PT", sans-serif;
+}
 .reacrQilrddf {
   width: 100%;
   padding: 10px;

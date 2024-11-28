@@ -54,7 +54,7 @@ const ButtonWithPopProd = () => {
 
             <form onSubmit={handleSubmit} className={css.wrapFormPopUp}>
               <label htmlFor="name" className={css.nameIdL}>
-                Ім'я:
+                Ім&apos;я:
               </label>
               <input
                 className={css.inputPopUpIn}

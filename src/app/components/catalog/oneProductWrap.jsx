@@ -20,10 +20,10 @@ const OneProductWrap = ({ product, lng }) => {
       )}
       <Link
         className={css.linKInSmallPro}
-        href={`/${lng}/product/${transliterate(product.name[lng])}`}
+        href={`/product/${transliterate(product.name)}`}
       >
         <div className={css.wrapNameProdWithArrow}>
-          <p className={css.pInNameProduct}>{product.name[lng]}</p>
+          <p className={css.pInNameProduct}>{product.name}</p>
           <IoArrowForwardOutline className={css.newwardOutline} />
         </div>
       </Link>

@@ -5,10 +5,8 @@
 // import dynamic from "next/dynamic";
 // import "react-quill/dist/quill.snow.css";
 
-// // Динамічне завантаження React Quill
 // const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
-// // Налаштування інструментів панелі
 // const modules = {
 //   toolbar: [
 //     [{ header: [2, 3, false] }],
@@ -34,84 +32,54 @@
 //   selectedCategory,
 //   fetchCategories,
 //   clearSelection,
-//   categories = [], // Список категорій для вибору батьківської
+//   categories = [],
 // }) {
-//   // Ініціалізація стану форми
 //   const [formState, setFormState] = useState({
-//     name: { ua: "", en: "", ru: "", pl: "" },
+//     name: "",
 //     parent: "",
 //     properties: [],
-//     shorttitle: { ua: "", en: "", ru: "", pl: "" },
-//     longdesc: { ua: "", en: "", ru: "", pl: "" }, // Довгий опис з підтримкою HTML
-//     seotitle: { ua: "", en: "", ru: "", pl: "" },
-//     ceodescriptions: { ua: "", en: "", ru: "", pl: "" },
+//     shorttitle: "",
+//     longdesc: "",
+//     seotitle: "",
+//     ceodescription: "",
 //     image: "",
 //   });
 
-//   // Оновлення стану форми при виборі категорії
 //   useEffect(() => {
 //     if (selectedCategory) {
 //       setFormState({
-//         name: selectedCategory.name || { ua: "", en: "", ru: "", pl: "" },
+//         name: selectedCategory.name || "",
 //         parent: selectedCategory.parent?._id || "",
 //         properties: selectedCategory.properties || [],
-//         shorttitle: selectedCategory.shorttitle || {
-//           ua: "",
-//           en: "",
-//           ru: "",
-//           pl: "",
-//         },
-//         longdesc: selectedCategory.longdesc || {
-//           ua: "",
-//           en: "",
-//           ru: "",
-//           pl: "",
-//         },
-//         seotitle: selectedCategory.seotitle || {
-//           ua: "",
-//           en: "",
-//           ru: "",
-//           pl: "",
-//         },
-//         ceodescriptions: selectedCategory.ceodescriptions || {
-//           ua: "",
-//           en: "",
-//           ru: "",
-//           pl: "",
-//         },
+//         shorttitle: selectedCategory.shorttitle || "",
+//         longdesc: selectedCategory.longdesc || "",
+//         seotitle: selectedCategory.seotitle || "",
+//         ceodescription: selectedCategory.ceodescription || "",
 //         image: selectedCategory.image || "",
 //       });
 //     }
 //   }, [selectedCategory]);
 
-//   // Очищення форми
 //   const resetForm = () => {
 //     setFormState({
-//       name: { ua: "", en: "", ru: "", pl: "" },
+//       name: "",
 //       parent: "",
 //       properties: [],
-//       shorttitle: { ua: "", en: "", ru: "", pl: "" },
-//       longdesc: { ua: "", en: "", ru: "", pl: "" },
-//       seotitle: { ua: "", en: "", ru: "", pl: "" },
-//       ceodescriptions: { ua: "", en: "", ru: "", pl: "" },
+//       shorttitle: "",
+//       longdesc: "",
+//       seotitle: "",
+//       ceodescription: "",
 //       image: "",
 //     });
 //   };
 
-//   // Обробка змін в полі `longdesc` з перевіркою на дублювання значення
-//   const handleLongDescChange = useCallback(
-//     (lang, value) => {
-//       if (formState.longdesc[lang] !== value) {
-//         setFormState((prevState) => ({
-//           ...prevState,
-//           longdesc: { ...prevState.longdesc, [lang]: value },
-//         }));
-//       }
-//     },
-//     [formState.longdesc]
-//   );
+//   const handleLongDescChange = useCallback((value) => {
+//     setFormState((prevState) => ({
+//       ...prevState,
+//       longdesc: value,
+//     }));
+//   }, []);
 
-//   // Обробка сабміту форми
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
 //     try {
@@ -131,8 +99,8 @@
 //         });
 //       }
 //       clearSelection();
-//       fetchCategories(); // Оновлення списку категорій після збереження
-//       resetForm(); // Очищення форми після сабміту
+//       fetchCategories();
+//       resetForm();
 //     } catch (error) {
 //       Swal.fire({
 //         icon: "error",
@@ -144,30 +112,17 @@
 
 //   return (
 //     <form onSubmit={handleSubmit} className={css.formWrapCat}>
-//       {/* Назва категорії на різних мовах */}
-//       <div className={css.wrapOneMenuLinkf}>
-//         {["ua", "en", "ru", "pl"].map((lang) => (
-//           <div key={lang} className={css.labelWithNameCat}>
-//             <label className={css.catLabel}>
-//               Назва категорії ({lang.toUpperCase()})
-//             </label>
-//             <input
-//               type="text"
-//               className={css.inputInCate}
-//               value={formState.name[lang]}
-//               onChange={(e) =>
-//                 setFormState({
-//                   ...formState,
-//                   name: { ...formState.name, [lang]: e.target.value },
-//                 })
-//               }
-//               required
-//             />
-//           </div>
-//         ))}
+//       <div className={css.labelWithNameCat}>
+//         <label className={css.catLabel}>Назва категорії</label>
+//         <input
+//           type="text"
+//           className={css.inputInCate}
+//           value={formState.name}
+//           onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+//           required
+//         />
 //       </div>
 
-//       {/* Вибір батьківської категорії */}
 //       <div className={css.labelWithNameCat}>
 //         <label className={css.catLabel}>Батьківська категорія</label>
 //         <select
@@ -181,7 +136,7 @@
 //           {categories && categories.length > 0 ? (
 //             categories.map((category) => (
 //               <option key={category._id} value={category._id}>
-//                 {category.name.ua}
+//                 {category.name}
 //               </option>
 //             ))
 //           ) : (
@@ -190,97 +145,53 @@
 //         </select>
 //       </div>
 
-//       {/* Довгий опис з підтримкою HTML для кожної мови */}
-//       <div className={css.wrapOneMenuLinkf}>
-//         {["ua", "en", "ru", "pl"].map((lang) => (
-//           <div key={lang} className={css.labelWithNameCatWith}>
-//             <label className={css.catLabel}>
-//               Довгий опис ({lang.toUpperCase()})
-//             </label>
-//             <ReactQuill
-//               className={css.reacrQilrddf}
-//               theme="snow"
-//               value={formState.longdesc[lang]}
-//               onChange={(value) => handleLongDescChange(lang, value)}
-//               modules={modules}
-//               formats={formats}
-//             />
-//           </div>
-//         ))}
+//       <div className={css.labelWithNameCatWith}>
+//         <label className={css.catLabel}>Довгий опис</label>
+//         <ReactQuill
+//           className={css.reacrQilrddf}
+//           theme="snow"
+//           value={formState.longdesc}
+//           onChange={handleLongDescChange}
+//           modules={modules}
+//           formats={formats}
+//         />
 //       </div>
 
-//       {/* Short Title на різних мовах */}
-//       <div className={css.wrapOneMenuLinkf}>
-//         {["ua", "en", "ru", "pl"].map((lang) => (
-//           <div key={lang} className={css.labelWithNameCat}>
-//             <label className={css.catLabel}>
-//               Короткий заголовок ({lang.toUpperCase()})
-//             </label>
-//             <input
-//               type="text"
-//               className={css.inputInCate}
-//               value={formState.shorttitle[lang]}
-//               onChange={(e) =>
-//                 setFormState({
-//                   ...formState,
-//                   shorttitle: {
-//                     ...formState.shorttitle,
-//                     [lang]: e.target.value,
-//                   },
-//                 })
-//               }
-//             />
-//           </div>
-//         ))}
+//       <div className={css.labelWithNameCat}>
+//         <label className={css.catLabel}>Короткий заголовок</label>
+//         <input
+//           type="text"
+//           className={css.inputInCate}
+//           value={formState.shorttitle}
+//           onChange={(e) =>
+//             setFormState({ ...formState, shorttitle: e.target.value })
+//           }
+//         />
 //       </div>
 
-//       {/* SEO Title на різних мовах */}
-//       <div className={css.wrapOneMenuLinkf}>
-//         {["ua", "en", "ru", "pl"].map((lang) => (
-//           <div key={lang} className={css.labelWithNameCat}>
-//             <label className={css.catLabel}>
-//               SEO заголовок ({lang.toUpperCase()})
-//             </label>
-//             <input
-//               type="text"
-//               className={css.inputInCate}
-//               value={formState.seotitle[lang]}
-//               onChange={(e) =>
-//                 setFormState({
-//                   ...formState,
-//                   seotitle: { ...formState.seotitle, [lang]: e.target.value },
-//                 })
-//               }
-//             />
-//           </div>
-//         ))}
+//       <div className={css.labelWithNameCat}>
+//         <label className={css.catLabel}>SEO заголовок</label>
+//         <input
+//           type="text"
+//           className={css.inputInCate}
+//           value={formState.seotitle}
+//           onChange={(e) =>
+//             setFormState({ ...formState, seotitle: e.target.value })
+//           }
+//         />
 //       </div>
 
-//       {/* SEO Description на різних мовах */}
-//       <div className={css.wrapOneMenuLinkf}>
-//         {["ua", "en", "ru", "pl"].map((lang) => (
-//           <div key={lang} className={css.labelWithNameCat}>
-//             <label className={css.catLabel}>
-//               SEO опис ({lang.toUpperCase()})
-//             </label>
-//             <textarea
-//               className={css.textAreaInCate}
-//               value={formState.ceodescriptions[lang]}
-//               onChange={(e) =>
-//                 setFormState({
-//                   ...formState,
-//                   ceodescriptions: {
-//                     ...formState.ceodescriptions,
-//                     [lang]: e.target.value,
-//                   },
-//                 })
-//               }
-//             />
-//           </div>
-//         ))}
+//       <div className={css.labelWithNameCat}>
+//         <label className={css.catLabel}>SEO опис</label>
+//         <textarea
+//           className={css.textAreaInCate}
+//           value={formState.ceodescription}
+//           onChange={(e) =>
+//             setFormState({ ...formState, ceodescription: e.target.value })
+//           }
+//         />
 //       </div>
 
-//       {/* Поле для зображення */}
 //       <div className={css.labelWithNameCat}>
 //         <label className={css.catLabel}>URL зображення</label>
 //         <input
@@ -299,20 +210,22 @@
 //     </form>
 //   );
 // }
+"use client";
+
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import css from "../admin.module.css";
 import Swal from "sweetalert2";
 import dynamic from "next/dynamic";
-import "react-quill-new/dist/quill.snow.css";
+import "react-quill/dist/quill.snow.css";
 
-const ReactQuill = dynamic(() => import("react-quill-new"), { ssr: false });
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const modules = {
   toolbar: [
-    [{ header: "1" }, { header: "2" }, { font: [] }],
-    [{ list: "ordered" }, { list: "unordered" }],
+    [{ header: [2, 3, false] }],
     ["bold", "italic", "underline"],
+    [{ list: "ordered" }, { list: "bullet" }],
     ["link", "image"],
     ["clean"],
   ],
@@ -320,12 +233,11 @@ const modules = {
 
 const formats = [
   "header",
-  "font",
   "bold",
   "italic",
   "underline",
-  "ordered", // замість "list"
-  "unordered", // замість "bullet"
+  "list",
+  "bullet",
   "link",
   "image",
 ];
@@ -343,12 +255,15 @@ export default function CategoryForm({
     shorttitle: "",
     longdesc: "",
     seotitle: "",
-    seodescription: "",
+    seodescription: "", // Виправлено на правильну назву
     image: "",
   });
 
+  // Заповнення форми у випадку редагування
   useEffect(() => {
     if (selectedCategory) {
+      console.log("selectedCategory", selectedCategory);
+
       setFormState({
         name: selectedCategory.name || "",
         parent: selectedCategory.parent?._id || "",
@@ -362,6 +277,7 @@ export default function CategoryForm({
     }
   }, [selectedCategory]);
 
+  // Скидання форми
   const resetForm = () => {
     setFormState({
       name: "",
@@ -375,6 +291,7 @@ export default function CategoryForm({
     });
   };
 
+  // Зміна довгого опису
   const handleLongDescChange = useCallback((value) => {
     setFormState((prevState) => ({
       ...prevState,
@@ -382,24 +299,38 @@ export default function CategoryForm({
     }));
   }, []);
 
+  // Надсилання форми
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const payload = { ...formState };
+
+      // Видаляємо поле parent, якщо воно пусте
+      if (!payload.parent) {
+        delete payload.parent;
+      }
+      console.log("payload", payload);
+
+      // Якщо поле ceodescription або longdesc порожнє, задаємо дефолтне значення
+      payload.seodescription = payload.seodescription || "";
+      payload.longdesc = payload.longdesc || "";
+
       if (selectedCategory) {
-        await axios.put(`/api/category?id=${selectedCategory._id}`, formState);
+        await axios.put(`/api/category?id=${selectedCategory._id}`, payload);
         Swal.fire({
           icon: "success",
           title: "Категорія оновлена!",
           text: "Категорію успішно оновлено.",
         });
       } else {
-        await axios.post("/api/category", formState);
+        await axios.post("/api/category", payload);
         Swal.fire({
           icon: "success",
           title: "Категорія додана!",
           text: "Нова категорія успішно додана.",
         });
       }
+
       clearSelection();
       fetchCategories();
       resetForm();
@@ -409,8 +340,10 @@ export default function CategoryForm({
         title: "Помилка!",
         text: "Сталася помилка під час збереження категорії.",
       });
+      console.error("Error saving category:", error);
     }
   };
+  console.log("formState", formState);
 
   return (
     <form onSubmit={handleSubmit} className={css.formWrapCat}>
@@ -435,15 +368,11 @@ export default function CategoryForm({
           }
         >
           <option value="">Без батьківської категорії</option>
-          {categories && categories.length > 0 ? (
-            categories.map((category) => (
-              <option key={category._id} value={category._id}>
-                {category.name}
-              </option>
-            ))
-          ) : (
-            <option disabled>Завантаження категорій...</option>
-          )}
+          {categories.map((category) => (
+            <option key={category._id} value={category._id}>
+              {category.name}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -487,7 +416,7 @@ export default function CategoryForm({
         <label className={css.catLabel}>SEO опис</label>
         <textarea
           className={css.textAreaInCate}
-          value={formState.seodescription}
+          value={formState.seodescription} // Використовується правильна назва
           onChange={(e) =>
             setFormState({ ...formState, seodescription: e.target.value })
           }

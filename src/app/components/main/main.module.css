@@ -10,6 +10,21 @@
   /* background: url("../../img/vizualJan.jpg") no-repeat center center; */
   background-size: cover;
 }
+.byeButtonM {
+  width: 200px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Futura PT";
+  font-size: 20px;
+  color: white;
+  background: #f8b123;
+  margin-top: 40px;
+  cursor: pointer;
+  margin-left: 40px;
+  border: none;
+}
 .smallWrapInFir {
   position: relative;
   z-index: 4;
@@ -492,4 +507,432 @@
   cursor: pointer;
   position: relative;
   font-family: "Futura PT";
+}
+@media only screen and (max-width: 479px) and (min-width: 300px) {
+  .smallWrapInFir {
+    position: relative;
+    z-index: 4;
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .h1ForMain {
+    font-family: "Futura PT";
+    font-size: 30px;
+    color: white;
+    width: 100%;
+  }
+  .pInMain {
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .ourPerevaPo {
+    font-family: "Futura PT";
+    font-size: 30px;
+    color: #27214f;
+  }
+  .onePerevage {
+    width: 300px;
+    height: auto;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .wrapAllPreb {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .imageStyle {
+    width: 80px;
+    height: auto;
+  }
+  .planingP {
+    font-family: "Futura PT";
+    font-size: 30px;
+    color: #27214f;
+    font-weight: bold;
+  }
+  .wrapWhotYouNeedSmall {
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .wrapPlanningB {
+    width: 99%;
+  }
+  .wrapOnePlanning {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .descriptionsWrapPlan {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0px;
+  }
+  .persh {
+    width: 100%;
+    height: auto;
+  }
+  .wrapInformation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .adviser {
+    width: 100%;
+    height: 681px;
+    object-fit: cover;
+  }
+  .wrapInformationsBlock {
+    background: #27214f;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .wrapPWithCatalog {
+    width: 99%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pinCatalog {
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: #27214f;
+  }
+  .pinCatalogLo {
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: #27214f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .newwardOutline {
+    color: #27214f;
+    margin-left: 5px;
+    font-size: 30px;
+  }
+  .wrapAllKvart {
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .wrapOneKvart {
+    width: 99%;
+    margin-top: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 700px) and (min-width: 479px) {
+  .smallWrapInFir {
+    position: relative;
+    z-index: 4;
+    width: 98%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .h1ForMain {
+    font-family: "Futura PT";
+    font-size: 30px;
+    color: white;
+    width: 100%;
+  }
+  .pInMain {
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .wrapAllPreb {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .imageStyle {
+    width: 80px;
+    height: auto;
+  }
+  .wrapWhotYouNeedSmall {
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  .wrapPlanningB {
+    width: 99%;
+  }
+  .wrapOnePlanning {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .descriptionsWrapPlan {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0px;
+  }
+  .persh {
+    width: 100%;
+    height: auto;
+  }
+  .wrapInformation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .adviser {
+    width: 100%;
+    height: 681px;
+    object-fit: cover;
+  }
+  .wrapInformationsBlock {
+    background: #27214f;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .wrapPWithCatalog {
+    width: 99%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pinCatalog {
+    font-family: "Futura PT";
+    font-size: 25px;
+    color: #27214f;
+  }
+  .pinCatalogLo {
+    font-family: "Futura PT";
+    font-size: 25px;
+    color: #27214f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .newwardOutline {
+    color: #27214f;
+    margin-left: 5px;
+    font-size: 35px;
+  }
+  .wrapAllKvart {
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .wrapOneKvart {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 960px) and (min-width: 700px) {
+  .wrapPWithCatalog {
+    width: 99%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrapAllKvart {
+    width: 99%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .smallWrapInFir {
+    position: relative;
+    z-index: 4;
+    width: 699px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .h1ForMain {
+    font-family: "Futura PT";
+    font-size: 30px;
+    color: white;
+    width: 100%;
+  }
+  .pInMain {
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .whoNeedPInTwoNew {
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: #5d5d5d;
+    font-weight: bolder;
+  }
+  .wrapInformation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .adviser {
+    width: 100%;
+    height: 681px;
+    object-fit: cover;
+  }
+  .wrapInformationsBlock {
+    background: #27214f;
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 960px) {
+  .wrapAllKvart {
+    width: 99%;
+  }
+  .whoNeedPInTwoNew {
+    font-family: "Futura PT";
+    font-size: 30px;
+    color: #5d5d5d;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .mainInfoemationsE {
+    font-family: "Futura PT";
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .informationsPInSmallW {
+    font-family: "Futura PT";
+    font-size: 20px;
+    color: white;
+    width: 100%;
+  }
+  .wrapPWithCatalog {
+    width: 99%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1200px) {
+  .wrapAllKvart {
+    width: 99%;
+  }
+  .wrapPWithCatalog {
+    width: 99%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .whoNeedPInTwoNew {
+    font-family: "Futura PT";
+
+    color: #5d5d5d;
+    font-weight: bolder;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1600px) and (min-width: 1400px) {
+  .wrapAllKvart {
+    width: 95%;
+  }
 }

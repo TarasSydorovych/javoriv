@@ -1,53 +1,14 @@
 import mongoose from "mongoose";
 
-const localizedContentSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  seotitle: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  seodescription: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  shortDescription: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  longDescription: {
-    type: String,
-    required: true,
-    trim: true,
-  },
+const blogSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  seotitle: { type: String, required: true },
+  seodescription: { type: String, required: true },
+  shortDescription: { type: String, required: true },
+  longDescription: { type: String, required: true },
+  photos: { type: [String], required: true },
 });
 
-const blogSchema = new mongoose.Schema(
-  {
-    translations: {
-      en: localizedContentSchema, // Англійська
-      pl: localizedContentSchema, // Польська
-      ru: localizedContentSchema, // Російська
-      ua: localizedContentSchema, // Українська
-    },
-    videoId: {
-      type: String,
-      required: true,
-      trim: true,
-    },
-    photos: [
-      {
-        type: String, // URL або шлях до фото
-      },
-    ],
-  },
-  { timestamps: true }
-);
+const Blog = mongoose.models.Blog || mongoose.model("Blog", blogSchema);
 
-export default mongoose.models.Blog || mongoose.model("Blog", blogSchema);
+export default Blog;

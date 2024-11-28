@@ -1,5 +1,14 @@
+export const config = {
+  api: {
+    bodyParser: false, // Забороняємо стандартний парсер
+    sizeLimit: "100mb", // Збільшуємо обмеження на розмір запиту
+  },
+};
+
 import { mongooseConnect } from "../../lib/mongoose";
 import Blog from "../../models/Blog";
+import formidable from "formidable";
+import path from "path";
 
 export default async function handler(req, res) {
   await mongooseConnect();
@@ -50,17 +59,53 @@ async function handleGetRequest(req, res) {
 
 async function handlePostRequest(req, res) {
   try {
-    const { translations, videoId, photos } = req.body;
+    const form = formidable({
+      multiples: true,
+      uploadDir: path.join(process.cwd(), "public/uploads"),
+      keepExtensions: true,
+      maxFileSize: 50 * 1024 * 1024, // 50 MB
+    });
+
+    const data = await new Promise((resolve, reject) => {
+      form.parse(req, (err, fields, files) => {
+        if (err) reject(err);
+        resolve({ fields, files });
+      });
+    });
+
+    const { fields, files } = data;
+
+    // Обробка полів
+    const title = fields.title?.toString();
+    const seotitle = fields.seotitle?.toString();
+    const seodescription = fields.seodescription?.toString();
+    const shortDescription = fields.shortDescription?.toString();
+    const longDescription = fields.longDescription?.toString();
+
+    // Обробка фото
+    const photos = [];
+    if (files.photos) {
+      const photoFiles = Array.isArray(files.photos)
+        ? files.photos
+        : [files.photos];
+      photoFiles.forEach((file) => {
+        photos.push(`/uploads/${path.basename(file.filepath)}`);
+      });
+    }
 
     const newBlog = new Blog({
-      translations,
-      videoId,
+      title,
+      seotitle,
+      seodescription,
+      shortDescription,
+      longDescription,
       photos,
     });
 
     await newBlog.save();
     res.status(201).json({ success: true, data: newBlog });
   } catch (error) {
+    console.error("Error while creating blog:", error);
     res
       .status(500)
       .json({ success: false, error: "Помилка при створенні блогу" });
@@ -70,11 +115,50 @@ async function handlePostRequest(req, res) {
 async function handlePutRequest(req, res) {
   try {
     const { id } = req.query;
-    const { translations, videoId, photos } = req.body;
+    const form = formidable({
+      multiples: true,
+      uploadDir: path.join(process.cwd(), "public/uploads"),
+      keepExtensions: true,
+      maxFileSize: 50 * 1024 * 1024, // 50 MB
+    });
+
+    const data = await new Promise((resolve, reject) => {
+      form.parse(req, (err, fields, files) => {
+        if (err) reject(err);
+        resolve({ fields, files });
+      });
+    });
+
+    const { fields, files } = data;
+
+    // Обробка полів
+    const title = fields.title?.toString();
+    const seotitle = fields.seotitle?.toString();
+    const seodescription = fields.seodescription?.toString();
+    const shortDescription = fields.shortDescription?.toString();
+    const longDescription = fields.longDescription?.toString();
+
+    // Обробка фото
+    const photos = [];
+    if (files.photos) {
+      const photoFiles = Array.isArray(files.photos)
+        ? files.photos
+        : [files.photos];
+      photoFiles.forEach((file) => {
+        photos.push(`/uploads/${path.basename(file.filepath)}`);
+      });
+    }
 
     const updatedBlog = await Blog.findByIdAndUpdate(
       id,
-      { translations, videoId, photos },
+      {
+        title,
+        seotitle,
+        seodescription,
+        shortDescription,
+        longDescription,
+        photos: photos.length > 0 ? photos : undefined,
+      },
       { new: true, runValidators: true }
     );
 
@@ -86,6 +170,7 @@ async function handlePutRequest(req, res) {
 
     res.status(200).json({ success: true, data: updatedBlog });
   } catch (error) {
+    console.error("Error while updating blog:", error);
     res
       .status(500)
       .json({ success: false, error: "Помилка при оновленні блогу" });

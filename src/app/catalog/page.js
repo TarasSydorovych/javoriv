@@ -30,7 +30,13 @@ async function getAllProducts() {
   }
   return res.json();
 }
-
+export async function generateMetadata() {
+  return {
+    title: "Каталог квартир у Новояворівську – сучасні пропозиції",
+    description:
+      "Ознайомтесь із каталогом квартир у Новояворівську. Великий вибір сучасного житла з оптимальним плануванням. Оберіть квартиру своєї мрії!",
+  };
+}
 export default async function CatalogPage({ params: { lng } }) {
   const categories = await getCategories();
   const products = await getAllProducts();
@@ -46,12 +52,10 @@ export default async function CatalogPage({ params: { lng } }) {
               {categories.map((category) => (
                 <li key={category._id} className={styles.listLi}>
                   <Link
-                    href={`/${lng}/catalog/${transliterate(
-                      category.name[lng]
-                    )}`}
+                    href={`/catalog/${transliterate(category.name)}`}
                     className={styles.listLi}
                   >
-                    {category.name[lng]}{" "}
+                    {category.name}{" "}
                     <AiOutlinePlus className={styles.staleIconPlus} />
                     {/* Виведення назви категорії на поточній мові */}
                   </Link>
@@ -73,7 +77,7 @@ export default async function CatalogPage({ params: { lng } }) {
                 ))}
               </div>
             ) : (
-              <p>Немає доступних продуктів.</p>
+              <p>Немає доступних квартир.</p>
             )}
           </main>
         </div>

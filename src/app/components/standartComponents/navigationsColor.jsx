@@ -49,10 +49,18 @@ const NavigationsColor = () => {
                     className={css.link}
                     onClick={toggleMenu}
                   >
-                    Продукція
+                    Квартири
                   </Link>
                 </li>
-
+                <li>
+                  <Link
+                    href={`/info`}
+                    className={css.link}
+                    onClick={toggleMenu}
+                  >
+                    Інформація про об&apos;єкт
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href={`/blog`}
@@ -62,15 +70,7 @@ const NavigationsColor = () => {
                     Блог
                   </Link>
                 </li>
-                <li>
-                  <Link
-                    href={`/about`}
-                    className={css.link}
-                    onClick={toggleMenu}
-                  >
-                    Про нас
-                  </Link>
-                </li>
+
                 <li>
                   <Link
                     href={`/contact`}
@@ -96,17 +96,17 @@ const NavigationsColor = () => {
               Квартири
             </Link>
           </li>
-
+          <li className={css.liNavigationColor}>
+            <Link href={`/info`} className={css.link}>
+              Інформація про об&apos;єкт
+            </Link>
+          </li>
           <li className={css.liNavigationColor}>
             <Link href={`/blog`} className={css.link}>
               Блог
             </Link>
           </li>
-          <li className={css.liNavigationColor}>
-            <Link href={`/about`} className={css.link}>
-              Про нас
-            </Link>
-          </li>
+
           <li className={css.liNavigationColor}>
             <Link href={`/contact`} className={css.link}>
               Контакти

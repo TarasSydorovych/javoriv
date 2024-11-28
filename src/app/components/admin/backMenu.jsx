@@ -34,6 +34,9 @@ const BackMenu = () => {
 
   return (
     <div className={css.wrapBackMenu}>
+      <Link href={`/admin/main`} className={css.linkInDas}>
+        Головна сторінка
+      </Link>
       <Link href={`/admin/categories`} className={css.linkInDas}>
         Категорії
       </Link>
