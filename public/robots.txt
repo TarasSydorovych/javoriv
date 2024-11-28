@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /admin/
 
-Sitemap: http://webui-studio.com/sitemap.xml
+Sitemap: https://yanivbud.com.ua/sitemap.xml
